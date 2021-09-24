@@ -4,12 +4,12 @@
 
 ## Índice
 
-- <a href="1">Configuracion</a>
-- <a href="2">Creación de un repositorio</a>
-- <a href="3">Comprobar el estado del repositorio</a>
-- <a href="4">Realizando Commit's</a>
-- <a href="5">Modificación de ficheros</a>
-- <a href="6">Historial</a>
+- <a href="#1">Configuracion</a>
+- <a href="#2">Creación de un repositorio</a>
+- <a href="#3">Comprobar el estado del repositorio</a>
+- <a href="#4">Realizando Commit's</a>
+- <a href="#5">Modificación de ficheros</a>
+- <a href="#6">Historial</a>
 
 <a name="1"></a>
 
@@ -22,10 +22,14 @@ Para manipular Git sin ningún problema hay que configurar el nombre de usuario,
 
 ![1](https://github.com/Regnierd/Git/blob/main/ManipulacionGit/img/1.PNG)
 
+<a name="2"></a>
+
 ### Creación de un repositorio 
 A continuación, creamos un repositorio en el directorio /home/javier/<b>dpl</b>. Para crear el repositorio necesitamos usar el siguiente comando: <b>git init</b> y podemos ver como se crea <b>.git</b> dentro de <b>/dpl.</b>
 
 ![2](https://github.com/Regnierd/Git/blob/main/ManipulacionGit/img/2.PNG)
+
+<a name="3"></a>
 
 ### Comprobar el estado del repositorio
 Para comprobar el estado del repositorio necesitamos usar el comando: <b>git status</b>. Que te muestra en qué rama estás y si hay commits por resolver. Ahora creamos un archivo <b>.txt</b> dentro del repositorio con algo escrito dentro.
@@ -36,10 +40,14 @@ Ahora volvemos a usar <b>git status</b> y podemos apreciar que hay un archivo si
 
 ![4](https://github.com/Regnierd/Git/blob/main/ManipulacionGit/img/4.PNG)
 
+<a name="4"></a>
+
 ### Realizando Commit's
 Para que deje de decirnos que hay un archivo sin seguimiento necesitamos usar el siguiente comando: <b>git commit -m “nombre-del-commit”</b>, una vez lanzado vemos como 1 fichero ha cambiado y hay 2 inserciones. Hacemos otra vez <b>git status</b> y vemos que ya no nos aparece que hay un fichero sin seguimiento.
 
 ![5](https://github.com/Regnierd/Git/blob/main/ManipulacionGit/img/5.PNG)
+
+<a name="5"></a>
 
 ### Modificación de ficheros
 Cambiamos el fichero que creamos antes para ver los cambios comparado con la versión guardada anteriormente.
@@ -53,6 +61,8 @@ Para ello usamos: <b>git diff</b> y vemos que lo que está en rojo es lo que hab
 Agregamos los cambios nuevamente con <b>git add nombre-fichero</b> y luego hacemos un commit con los cambios que hemos hecho.
 
 ![8](https://github.com/Regnierd/Git/blob/main/ManipulacionGit/img/8.PNG)
+
+<a name="6"></a>
 
 ### Historial
 Podemos cambiar los nombres de los commit con el siguiente comando: <b>git commit --amend -m “nombre-nuevo-del-commit”</b>
