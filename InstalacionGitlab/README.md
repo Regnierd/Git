@@ -42,6 +42,26 @@ Por último, usaremos el siguiente comando para terminar la configuración:
 
 ### 1. Acceso
 
+Ahora para comprobar que todo funciona correctamente abriremos un navegador de nuestra máquina y en la url pondremos nuestra ip o localhost. Al poner localhost en en la url vemos como nos aparece este login. Introducimos el usuario root y la contraseña.
+
+![7](https://github.com/Regnierd/Git/blob/main/InstalacionGitlab/img/7.PNG)
+
+Si al poner el usuario y contraseña nos da error, tendremos que cambiar la contraseña de root usando el siguiente comando: <b>sudo gitlab-rails console</b>, al cual entraremos a una consola de ruby. Primero tenemos que encontrar al usuario root, para ello usaremos el siguiente comando: user = <b>User.where(id: 1).first</b>
+
+![8](https://github.com/Regnierd/Git/blob/main/InstalacionGitlab/img/8.PNG)
+
+Una vez encontrado el usuario procedemos a cambiar la contraseña. Para ello usaremos el comando: <b>user.password = ‘contraseña’</b> y <b>user.password = ‘misma_contraseña’</b>. La segunda es para confirmar la contraseña cambiada, tienen que ser iguales. Después de confirmar la contraseña tenemos que guardar los cambios del usuario con el comando <b>user.save! </b>
+
+![9](https://github.com/Regnierd/Git/blob/main/InstalacionGitlab/img/9.PNG)
+
+Salimos de la terminal de ruby y volvemos hacer el comando <b>sudo gitlab-ctl reconfigure</b>.
+
+![6](https://github.com/Regnierd/Git/blob/main/InstalacionGitlab/img/6.PNG)
+
+Volvemos al navegador y procedemos a poner el usuario (root) y la contraseña que hemos puesto anteriormente. Una vez ingresado entraremos al servidor de Gitlab y nos saldrá una pantalla tal que así.
+
+![10](https://github.com/Regnierd/Git/blob/main/InstalacionGitlab/img/10.PNG)
+
 
 
 
